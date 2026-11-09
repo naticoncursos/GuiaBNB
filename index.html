@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guia de Estudo BNB • @naticoncursos_</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Cronograma de estudos para Analista Bancário 1 do BNB (Cesgranrio): 72 sessões, 12 semanas, 2h por dia, com prompts prontos para IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;700&display=swap">
+<style>
+/* Layout: uma coluna de leitura no celular; faixas de cor que vão de borda a borda, com o "dia de estudo" do PDF como peça central */
+:root{
+  --bg:#fbf8f9; --surface:#ffffff; --ink:#1e2532; --muted:#5b6574; --line:#eadfe3;
+  --brand:#a6193c; --brand-ink:#ffffff; --brand-soft:#f6e7ec; --hl:#ffe08a; --hl-ink:#1e2532;
+  --wa:#1a7f4b;
+  --display:"Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body:"Figtree", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#15121a; --surface:#1f1a24; --ink:#f1edf0; --muted:#b5abb3; --line:#3a2f38;
+  --brand:#e0577a; --brand-ink:#1a0a10; --brand-soft:#33202a; --hl:#ffd66b; --hl-ink:#1e2532; --wa:#3ec27f; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#15121a; --surface:#1f1a24; --ink:#f1edf0; --muted:#b5abb3; --line:#3a2f38;
+  --brand:#e0577a; --brand-ink:#1a0a10; --brand-soft:#33202a; --hl:#ffd66b; --hl-ink:#1e2532; --wa:#3ec27f; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4.4vw,40px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+a{color:inherit}
+section{padding-block:56px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand)}
+.stack{display:flex;flex-direction:column;gap:16px}
+.lead{font-size:19px;color:var(--muted);max-width:60ch}
+
+/* topo */
+.top{padding-block:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+.handle{font-weight:700;color:var(--brand)}
+.top small{color:var(--muted);font-size:13px}
+
+/* hero */
+.hero{padding-block:44px 32px;display:grid;gap:36px;grid-template-columns:1fr}
+.hero h1{font-size:clamp(36px,6.4vw,60px);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 58%,var(--hl) 58%);color:inherit;padding-inline:2px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero h1 em{background:none;color:var(--hl)}}
+:root[data-theme="dark"] .hero h1 em{background:none;color:var(--hl)}
+.hero-text{display:flex;flex-direction:column;gap:20px;min-width:0}
+.pillars{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.pillars li{display:grid;gap:2px;padding-left:16px;border-left:3px solid var(--brand)}
+.pillars b{font-family:var(--display);font-size:19px;font-weight:600}
+.pillars span{color:var(--muted);font-size:16px}
+
+.price{display:flex;flex-direction:column;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.price .tag{display:inline-block;align-self:flex-start;background:var(--hl);color:var(--hl-ink);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:6px}
+.price .row{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.price s{color:var(--muted);font-size:18px}
+.price .now{font-family:var(--display);font-size:46px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums;line-height:1}
+.price .now small{font-size:20px;font-weight:600}
+.price .note{font-size:14px;color:var(--muted)}
+
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--wa);color:#fff;font-weight:700;font-size:18px;text-decoration:none;padding:16px 22px;border-radius:12px;min-height:56px;transition:transform .15s ease, filter .15s ease}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--hl);outline-offset:3px}
+.btn svg{width:22px;height:22px;flex:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn{color:#0d1a12}}
+:root[data-theme="dark"] .btn{color:#0d1a12}
+
+/* peça central: a página do dia */
+.sheet{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 18px 40px -18px rgba(90,20,40,.35);background:#fff;transform:rotate(-1.2deg)}
+.sheet img{display:block;width:100%;height:auto}
+.sheet-cap{font-size:13px;color:var(--muted);margin-top:14px;text-align:center}
+
+/* números */
+.facts{background:var(--brand);color:var(--brand-ink)}
+.facts .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 16px;padding-block:30px}
+.fact b{display:block;font-family:var(--display);font-size:38px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.fact span{font-size:15px;opacity:.92}
+
+/* como é um dia */
+.day{display:grid;gap:28px}
+.steps-day{display:grid;gap:14px;counter-reset:s}
+.steps-day li{list-style:none;display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.steps-day li::before{counter-increment:s;content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:700;font-family:var(--display)}
+ol.steps-day{margin:0;padding:0}
+.steps-day p{color:var(--muted)}
+.steps-day h3{margin-bottom:2px}
+
+/* conteúdo */
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.item p{color:var(--muted);font-size:16px}
+
+/* galeria */
+.gallery{display:grid;grid-template-columns:1fr;gap:16px}
+.gallery figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.gallery img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);background:#fff}
+.gallery figcaption{font-size:14px;color:var(--muted)}
+
+/* como comprar */
+.buy{background:var(--brand-soft)}
+.buy ol{margin:0;padding:0;display:grid;gap:14px}
+.buy li{list-style:none;background:var(--surface);border-radius:12px;padding:18px;border:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.buy li b{color:var(--brand);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.buy li p{color:var(--muted)}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding-block:16px}
+summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--brand);font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+summary:focus-visible{outline:2px solid var(--brand);outline-offset:4px}
+details p{margin-top:10px;color:var(--muted);max-width:65ch}
+
+.final{text-align:left}
+.final .box{background:var(--surface);border:2px solid var(--brand);border-radius:16px;padding:26px;display:grid;gap:18px}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+
+@media (min-width:720px){
+  .hero{grid-template-columns:1.05fr 1fr;align-items:center;padding-block:64px 48px}
+  .facts .wrap{grid-template-columns:repeat(4,1fr)}
+  .day{grid-template-columns:1.2fr 1fr;align-items:center}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .buy ol{grid-template-columns:repeat(3,1fr)}
+  .final .box{grid-template-columns:1.3fr 1fr;align-items:center}
+}
+@media (min-width:980px){ .grid{grid-template-columns:repeat(3,1fr)} }
+.pixbox{display:grid;gap:20px;grid-template-columns:1fr}
+.qr{background:#fff;border-radius:14px;padding:12px;justify-self:center;border:1px solid var(--line)}
+.qr img{display:block;width:240px;max-width:100%;height:auto}
+.pixinfo{min-width:0}
+.lbl{font-weight:700;font-size:15px}
+.copy{display:flex;gap:8px;min-width:0}
+.copy input{flex:1;min-width:0;font:14px/1.2 ui-monospace,Menlo,Consolas,monospace;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.copy button{flex:none;font:700 16px var(--body);padding:0 18px;border-radius:10px;border:2px solid var(--brand);background:var(--surface);color:var(--brand);cursor:pointer;min-height:46px}
+.copy button:focus-visible,.copy input:focus-visible{outline:3px solid var(--hl);outline-offset:2px}
+.note{font-size:14px;color:var(--muted)}
+.note a{color:var(--brand);font-weight:700}
+@media (min-width:720px){.pixbox{grid-template-columns:auto 1fr;align-items:start}.buy .pixbox ol{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){ .btn{transition:none} .sheet{transform:none} }
+</style>
+</head>
+<body>
+
+<div class="wrap top">
+  <span class="handle">@naticoncursos_</span>
+  <small>Edição BNB • Cesgranrio</small>
+</div>
+
+<div class="wrap hero">
+  <div class="hero-text">
+    <span class="eyebrow">Analista Bancário 1 • Banco do Nordeste</span>
+    <h1>O guia e o cronograma <em>completos</em> para o concurso do BNB.</h1>
+    <p class="lead">Tudo o que você precisa para estudar com rumo, num único PDF: o que estudar em cada dia, o que a Cesgranrio mais cobra, questões reais de provas anteriores e revisões já programadas.</p>
+    <ul class="pillars">
+      <li><b>Cronograma dia a dia</b><span>72 sessões em 12 semanas, 2h por dia. Você abre o dia e sabe exatamente o que fazer.</span></li>
+      <li><b>Foco no que mais cai</b><span>O Top 5 de cada matéria nas provas da Cesgranrio para o BNB, a Caixa, o Banco do Brasil e outros bancos.</span></li>
+      <li><b>Questões reais e edital organizado</b><span>Provas anteriores com gabarito ligadas a cada dia, edital verticalizado e leis no site oficial.</span></li>
+      <li><b>Estude mesmo sem curso</b><span>Cada dia traz prompts prontos para usar no ChatGPT, no Claude ou em outro assistente de IA, até no plano gratuito.</span></li>
+    </ul>
+    <div class="price">
+      <span class="tag">Promoção de lançamento</span>
+      <div class="row"><s>De R$ 69,90</s><span class="now"><small>por R$</small> 29,90</span></div>
+      <a class="btn" href="#pix">Quero começar a estudar</a>
+      <p class="note">Pagamento por Pix, direto na página. Você recebe o PDF no WhatsApp, personalizado com o seu nome.</p>
+    </div>
+  </div>
+  <div>
+    <div class="sheet"><img src="img/dia.jpg" width="1200" height="675" alt="Página do Dia 1: blocos de Bancários, Matemática e Revisão, cada um com seu prompt pronto para copiar"></div>
+    <p class="sheet-cap">Página real do material: Semana 01, Dia 1</p>
+  </div>
+</div>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><b>72</b><span>sessões de estudo</span></div>
+    <div class="fact"><b>12</b><span>semanas, 6 dias por semana</span></div>
+    <div class="fact"><b>2h</b><span>por dia, em blocos de 60, 40 e 20 min</span></div>
+    <div class="fact"><b>96</b><span>páginas com links clicáveis</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap day">
+    <div class="stack">
+      <span class="eyebrow">Como é um dia de estudo</span>
+      <h2>Você só segue o dia e copia o prompt</h2>
+      <ol class="steps-day">
+        <li><div><h3>Matéria principal, 60 min</h3><p>Prompt em 3 etapas: teoria completa como uma mini apostila, pegadinhas da Cesgranrio com resumo e 5 questões inéditas corrigidas uma a uma.</p></div></li>
+        <li><div><h3>Segunda matéria, 40 min</h3><p>Teoria e 4 questões, de Matemática ou Português, alternando ao longo da semana.</p></div></li>
+        <li><div><h3>Revisão, 20 min</h3><p>Revisões programadas no dia seguinte, uma semana depois e cerca de um mês depois, para você não esquecer o que estudou.</p></div></li>
+        <li><div><h3>Questões reais</h3><p>Cada dia aponta questões de provas Cesgranrio sobre o mesmo assunto, com link para a prova e para o gabarito.</p></div></li>
+      </ol>
+    </div>
+    <figure class="gallery" style="grid-template-columns:1fr">
+      <img src="img/partida.jpg" width="1200" height="675" loading="lazy" alt="Página Seu ponto de partida: o Dia 1 explicado parte por parte com setas numeradas">
+      <figcaption>Logo no início, o material mostra o Dia 1 explicado parte por parte.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap stack">
+    <span class="eyebrow">O que vem no material</span>
+    <h2>Tudo o que você precisa para estudar com rumo</h2>
+    <div class="grid">
+      <div class="item"><h3>Cronograma dia a dia</h3><p>72 sessões com o assunto de cada bloco, na ordem certa, cobrindo todo o conteúdo cobrado no cargo.</p></div>
+      <div class="item"><h3>Prompts prontos</h3><p>Copie e cole no ChatGPT, no Claude ou em outro assistente de IA. Funcionam no plano pago ou gratuito.</p></div>
+      <div class="item"><h3>Top 5 da Cesgranrio</h3><p>Os assuntos mais cobrados em Português, Matemática e Bancários nas provas do BNB, Caixa, Banco do Brasil e outros bancos.</p></div>
+      <div class="item"><h3>Questões reais com link</h3><p>7 provas anteriores da Cesgranrio, com prova e gabarito abertos de graça, ligadas ao assunto de cada dia.</p></div>
+      <div class="item"><h3>Edital verticalizado</h3><p>Português, Matemática e Bancários organizados para você marcar o que já estudou.</p></div>
+      <div class="item"><h3>Revisões e caderno de erros</h3><p>Revisões já encaixadas no cronograma e um método simples para registrar e corrigir seus erros.</p></div>
+      <div class="item"><h3>Leis no site oficial</h3><p>Links para as leis do Planalto que caem em Conhecimentos Bancários, organizadas por tema.</p></div>
+      <div class="item"><h3>Semanas 11 e 12 de revisão</h3><p>O conteúdo novo termina na semana 10. As duas últimas semanas são de treino e revisão geral.</p></div>
+      <div class="item"><h3>Plano para dias difíceis</h3><p>Como estudar quando o dia aperta e como retomar se você atrasar, sem perder o ritmo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap stack">
+    <span class="eyebrow">Veja por dentro</span>
+    <h2>Páginas do material</h2>
+    <div class="gallery">
+      <figure><img src="img/capa.jpg" width="1200" height="675" loading="lazy" alt="Capa com sumário clicável e atalhos para as 12 semanas"><figcaption>Capa com sumário clicável e atalho para cada semana</figcaption></figure>
+      <figure><img src="img/top5.jpg" width="1200" height="675" loading="lazy" alt="Top 5 de Português, comparando a prova do BNB com outras provas da Cesgranrio"><figcaption>Top 5 de cada matéria nas provas da Cesgranrio</figcaption></figure>
+      <figure><img src="img/mapa.jpg" width="1200" height="675" loading="lazy" alt="Mapa das 72 sessões em uma página"><figcaption>Mapa das 72 sessões numa página só</figcaption></figure>
+      <figure><img src="img/edital.jpg" width="1200" height="675" loading="lazy" alt="Edital verticalizado de Português"><figcaption>Edital verticalizado para marcar o que já estudou</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="buy" id="pix">
+  <div class="wrap stack">
+    <span class="eyebrow">Como comprar</span>
+    <h2>Pague por Pix e receba o seu PDF</h2>
+    <div class="pixbox">
+      <div class="qr"><img src="img/pix.svg" width="240" height="240" alt="QR Code Pix de R$ 29,90 para Natalia Mesquita Moreira"></div>
+      <div class="stack pixinfo">
+        <ol>
+          <li><b>Passo 1</b><h3>Pague R$ 29,90 no Pix</h3><p>Leia o QR Code no app do seu banco ou use o Pix copia e cola. O valor já vem preenchido. Recebedora: Natalia Mesquita Moreira (CNPJ 27.841.020/0001-41).</p></li>
+          <li><b>Passo 2</b><h3>Envie o comprovante</h3><p>Toque em "Já paguei" e mande o comprovante no WhatsApp.</p></li>
+          <li><b>Passo 3</b><h3>Receba o seu PDF</h3><p>Assim que o pagamento for confirmado, você recebe o material personalizado com o seu nome.</p></li>
+        </ol>
+        <label for="pixcode" class="lbl">Pix copia e cola</label>
+        <div class="copy">
+          <input id="pixcode" readonly value="00020126360014br.gov.bcb.pix011427841020000141520400005303986540529.905802BR5924NATALIA MESQUITA MOREIRA6009FORTALEZA62170513CRONOGRAMABNB6304B3B2">
+          <button type="button" id="copybtn">Copiar</button>
+        </div>
+        <a class="btn" href="https://wa.me/5585988851805?text=Oi%2C%20Nati%21%20Paguei%20o%20Cronograma%20BNB%20por%20Pix.%20Segue%20o%20comprovante%3A" target="_blank" rel="noopener">Já paguei, enviar comprovante</a>
+        <p class="note">Tem alguma dúvida antes de pagar? <a href="https://wa.me/5585988851805?text=Oi%2C%20Nati%21%20Vim%20pelo%20Instagram%20e%20quero%20o%20Cronograma%20BNB%20para%20come%C3%A7ar%20a%20estudar." target="_blank" rel="noopener">Fale comigo no WhatsApp</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Dúvidas</span>
+    <h2>Perguntas frequentes</h2>
+    <div>
+      <details><summary>Preciso pagar alguma IA?</summary><p>Não. Os prompts funcionam no ChatGPT, no Claude ou em outro assistente de IA, no plano pago ou gratuito. O material traz dicas para aproveitar bem o plano gratuito.</p></details>
+      <details><summary>Preciso comprar curso ou apostila?</summary><p>Não. O material direciona o seu estudo e os prompts fazem a IA explicar cada assunto como uma mini apostila, com base em fontes oficiais. Se você já tem um curso, pode usar os dois juntos.</p></details>
+      <details><summary>Sou iniciante. Serve para mim?</summary><p>Sim. Em cada prompt você escolhe o seu nível (iniciante, intermediário ou avançado) e a explicação se adapta a você.</p></details>
+      <details><summary>Consigo usar no celular?</summary><p>Sim. É um PDF com sumário, atalhos e links clicáveis. Funciona no celular, no tablet e no computador.</p></details>
+      <details><summary>E se eu não tiver 2 horas em algum dia?</summary><p>O material tem uma página só para isso, com o que priorizar num dia curto e como retomar se você atrasar.</p></details>
+      <details><summary>Por que o PDF vem com o meu nome?</summary><p>Cada material é personalizado para a pessoa que comprou. É de uso individual e não pode ser compartilhado.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap final">
+    <div class="box">
+      <div class="stack">
+        <h2>Comece hoje o Dia 1</h2>
+        <p class="lead">72 sessões, 12 semanas e prompts prontos. De <s>R$ 69,90</s> por <b>R$ 29,90</b> no lançamento.</p>
+      </div>
+      <a class="btn" href="#pix">Quero começar a estudar</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><b class="handle">@naticoncursos_</b> • Nati Concursos • CNPJ 27.841.020/0001-41 • WhatsApp (85) 98885-1805</span>
+    <span>Material independente de estudo, sem vínculo com o Banco do Nordeste ou com a Cesgranrio.</span>
+  </div>
+</footer>
+<script>
+(function(){var b=document.getElementById('copybtn'),i=document.getElementById('pixcode');if(!b)return;
+b.addEventListener('click',function(){var ok=function(){b.textContent='Copiado!';setTimeout(function(){b.textContent='Copiar'},2500)};
+try{navigator.clipboard.writeText(i.value).then(ok,function(){i.focus();i.select();try{document.execCommand('copy');ok()}catch(e){}})}catch(e){i.focus();i.select();try{document.execCommand('copy');ok()}catch(e2){}}});})();
+</script>
+</body>
+</html>
