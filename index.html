@@ -61,8 +61,12 @@ section{padding-block:56px}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero h1 em{background:none;color:var(--hl)}}
 :root[data-theme="dark"] .hero h1 em{background:none;color:var(--hl)}
 .hero-text{display:flex;flex-direction:column;gap:20px;min-width:0}
-.banner{display:block;width:100%;max-width:100%;height:200px;object-fit:cover;object-position:center 45%;border-radius:14px}
-@media (min-width:720px){.banner{height:220px}}
+.banner{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:190px;padding:24px 16px;border-radius:16px;overflow:hidden;background:#8e1430 url(img/bnb-bg.jpg) center 40%/cover no-repeat;isolation:isolate}
+.banner::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(135deg,rgba(166,25,60,.92) 0%,rgba(122,14,40,.78) 55%,rgba(166,25,60,.55) 100%)}
+.banner-card{background:#fff;border-radius:12px;padding:12px 18px;box-shadow:0 10px 30px -10px rgba(0,0,0,.45);display:block}
+.banner-card img{display:block;width:200px;max-width:60vw;height:auto}
+.banner-tag{color:#fff;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+@media (min-width:720px){.banner{min-height:230px}.banner-card img{width:240px}}
 .pillars{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .pillars li{display:grid;gap:2px;padding-left:16px;border-left:3px solid var(--brand)}
 .pillars b{font-family:var(--display);font-size:19px;font-weight:600}
@@ -168,8 +172,10 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 
 <div class="wrap hero">
   <div class="hero-text">
-    <img class="banner" src="img/bnb.jpg" width="648" height="440" alt="Fachada de uma agência do Banco do Nordeste">
-    <span class="eyebrow">Analista Bancário 1 • Banco do Nordeste</span>
+    <div class="banner" role="img" aria-label="Banco do Nordeste">
+      <span class="banner-card"><img src="img/logo-bnb.png" width="570" height="222" alt="Banco do Nordeste"></span>
+      <span class="banner-tag">Analista Bancário 1 • Cesgranrio</span>
+    </div>
     <h1>O guia e o cronograma <em>completos</em> para o concurso do BNB.</h1>
     <p class="lead">Tudo o que você precisa para estudar com rumo, num único PDF: o que estudar em cada dia, o que a Cesgranrio mais cobra, questões reais de provas anteriores e revisões já programadas.</p>
     <ul class="pillars">
